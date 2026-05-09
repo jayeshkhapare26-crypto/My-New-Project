@@ -15,7 +15,7 @@ pipeline{
         }
         stage('Post Build Actions'){
         steps{
-           sh 'echo "build completed successfully"'
+           sh 'echo "build completed successfully by mistake"'
             sh 'sudo cp -r dist/* /var/www/html/'
             sh 'sudo systemctl restart nginx'
         }
