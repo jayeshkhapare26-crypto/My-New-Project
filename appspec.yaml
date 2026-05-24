@@ -1,0 +1,11 @@
+version: 2.0
+os: linux
+files:
+   -sources: /
+   destination: /var/www/html
+   overwrite: true
+hooks:
+  afterInstall:
+      - location: scripts/restartNginx.sh
+        timeout: 300
+        runas: root
